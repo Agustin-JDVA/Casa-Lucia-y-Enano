@@ -1,6 +1,9 @@
 export default function ProjectInfo() {
   return (
-    <section className="min-h-screen bg-white flex items-center justify-center px-8">
+    <section
+      id="info"
+      className="min-h-screen bg-white flex items-center justify-center px-8"
+    >
       <div className="max-w-5xl w-full">
 
         <h2 className="font-[family:var(--font-wix)] text-6xl font-bold uppercase mb-4">

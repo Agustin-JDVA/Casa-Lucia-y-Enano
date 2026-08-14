@@ -19,7 +19,7 @@ const renders = [
 
 export default function RenderGallery() {
   return (
-    <section className="relative h-screen w-full">
+    <section id="renders" className="relative h-screen w-full">
       <Swiper
         modules={[Navigation, Keyboard]}
         slidesPerView={1}

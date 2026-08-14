@@ -1,6 +1,9 @@
 export default function Hero() {
   return (
-    <section className="relative h-screen w-full overflow-hidden">
+    <section
+      id="inicio"
+      className="relative h-screen w-full overflow-hidden"
+    >
       <video
         src="/video/hero.mp4"
         autoPlay
