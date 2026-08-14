@@ -26,6 +26,25 @@ export default function Tour360() {
 
   const iframeInteractive = !isTouchDevice || isExploring;
 
+  const buttonStyle = `
+    flex
+    h-16
+    w-[240px]
+    items-center
+    justify-center
+    rounded-full
+    bg-white
+    text-sm
+    font-medium
+    uppercase
+    tracking-[0.18em]
+    text-black
+    shadow-xl
+    transition-all
+    duration-200
+    active:scale-95
+  `;
+
   return (
     <section className="relative h-screen w-full bg-black">
       <iframe
@@ -40,59 +59,28 @@ export default function Tour360() {
         title="Tour 360°"
       />
 
+      {/* BOTÓN PARA ENTRAR */}
       {isTouchDevice && !isExploring && (
-        <div className="absolute inset-0 z-10 flex items-center justify-center">
+        <div className="pointer-events-none absolute inset-0 z-[9999] flex items-center justify-center">
           <button
             onClick={() => setIsExploring(true)}
-            className="
-              rounded-full
-              bg-white
-              px-10
-              py-5
-              text-base
-              font-medium
-              uppercase
-              tracking-[0.18em]
-              text-black
-              shadow-xl
-              transition-all
-              duration-200
-              hover:scale-105
-              active:scale-95
-            "
+            className={`pointer-events-auto ${buttonStyle}`}
           >
             Explorar 360°
           </button>
         </div>
       )}
 
+      {/* BOTÓN PARA SALIR */}
       {isTouchDevice && isExploring && (
-        <button
-          onClick={() => setIsExploring(false)}
-          className="
-            absolute
-            right-6
-            top-6
-            z-30
-            rounded-full
-            bg-black/70
-            px-6
-            py-4
-            text-sm
-            font-medium
-            uppercase
-            tracking-[0.15em]
-            text-white
-            shadow-xl
-            backdrop-blur-md
-            transition-all
-            duration-200
-            hover:bg-black/85
-            active:scale-95
-          "
-        >
-          Salir del 360°
-        </button>
+        <div className="pointer-events-none absolute inset-0 z-[9999]">
+          <button
+            onClick={() => setIsExploring(false)}
+            className={`pointer-events-auto absolute left-1/2 top-6 -translate-x-1/2 ${buttonStyle}`}
+          >
+            Salir del 360°
+          </button>
+        </div>
       )}
     </section>
   );
