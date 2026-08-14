@@ -4,7 +4,7 @@ export default function Logo() {
       <img
         src="/logo/logo.png"
         alt="Logo"
-        className="h-8 w-auto sm:h-10 md:h-12 lg:h-14"
+        className="h-8 w-auto mix-blend-difference sm:h-10 md:h-12 lg:h-14"
       />
     </div>
   );
