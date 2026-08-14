@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section className="relative h-screen w-screen overflow-hidden">
+    <section className="relative h-screen w-full overflow-hidden">
       <video
         src="/video/hero.mp4"
         autoPlay
@@ -12,13 +12,13 @@ export default function Hero() {
 
       <div className="absolute inset-0 bg-black/25" />
 
-      <div className="absolute inset-0 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="font-[family:var(--font-wix)] text-white text-7xl md:text-9xl font-bold tracking-[0.18em] uppercase">
-            Casa lucia y enano
+      <div className="absolute inset-0 flex items-center justify-center px-6">
+        <div className="w-full max-w-7xl text-center">
+          <h1 className="font-[family:var(--font-wix)] text-3xl font-bold uppercase tracking-[0.12em] text-white sm:text-5xl md:text-7xl md:tracking-[0.15em] lg:text-8xl xl:text-9xl xl:tracking-[0.18em]">
+            Casa Lucía y Enano
           </h1>
 
-          <p className="mt-6 text-white/80 text-lg tracking-[0.4em] uppercase">
+          <p className="mt-5 text-xs uppercase tracking-[0.25em] text-white/80 sm:mt-6 sm:text-sm sm:tracking-[0.35em] md:text-lg md:tracking-[0.4em]">
             Montevideo · Uruguay
           </p>
         </div>
